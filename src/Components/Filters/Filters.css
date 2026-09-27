@@ -1,0 +1,97 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  padding: 4px 0 8px;
+}
+
+/* === Group === */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.filter-group-title {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #b8860b;
+  margin: 0 0 4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0ece3;
+}
+
+/* === Option === */
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: #555;
+  cursor: pointer;
+  padding: 6px 0;
+  line-height: 1.4;
+  transition: color 0.25s ease;
+}
+
+.filter-option:hover {
+  color: #111;
+}
+
+.filter-option input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #d5cebd;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.filter-option input[type='checkbox']:hover {
+  border-color: #b8860b;
+}
+
+.filter-option input[type='checkbox']:checked {
+  background: #111;
+  border-color: #111;
+}
+
+.filter-option input[type='checkbox']:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #f5d98b;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* === Clear === */
+.filter-clear {
+  margin-top: 20px;
+  padding: 14px 16px;
+  background: none;
+  border: 1px solid #e0dacb;
+  color: #888;
+  font-family: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+
+.filter-clear:hover {
+  border-color: #111;
+  color: #111;
+  background: #faf7f0;
+}

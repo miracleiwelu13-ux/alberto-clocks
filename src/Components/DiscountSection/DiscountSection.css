@@ -1,0 +1,100 @@
+.discount-section {
+  background: #0d0f12;   /* deep black — matches your theme */
+  color: #fff;
+  padding: 100px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(201, 164, 93, 0.15);
+  border-bottom: 1px solid rgba(201, 164, 93, 0.15);
+}
+
+.discount-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* === Watermark SALE + small label === */
+.discount-header {
+  position: relative;
+  margin-bottom: 30px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount-watermark {
+  font-family: 'Times New Roman', serif;
+  font-size: clamp(5rem, 12vw, 9rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: rgba(245, 217, 139, 0.15);   /* faint gold watermark */
+  line-height: 1;
+  user-select: none;
+}
+
+.discount-label {
+  position: absolute;
+  font-size: clamp(0.9rem, 1.8vw, 1.3rem);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+}
+
+/* === Offer text === */
+.discount-kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #f5d98b;
+  margin: 0 0 14px;
+}
+
+.discount-headline {
+  font-family: 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin: 0 0 14px;
+  color: #fff;
+}
+
+.discount-sub {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 36px;
+}
+
+/* === CTA === */
+.discount-cta {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f5d98b;
+  text-decoration: none;
+  border-bottom: 1px solid #f5d98b;
+  padding-bottom: 6px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.discount-cta:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* === Responsive === */
+@media (max-width: 720px) {
+  .discount-section {
+    padding: 70px 20px;
+  }
+
+  .discount-header {
+    height: 80px;
+    margin-bottom: 20px;
+  }
+}

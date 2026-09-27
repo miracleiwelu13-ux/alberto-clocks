@@ -1,0 +1,95 @@
+.deal-banner {
+  background: linear-gradient(90deg, #0d0f12 0%, #1a1c20 100%);
+  color: #fff;
+  border-top: 1px solid rgba(201, 164, 93, 0.2);
+  border-bottom: 1px solid rgba(201, 164, 93, 0.2);
+  padding: 40px 0;
+}
+
+.deal-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Left text block */
+.deal-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.deal-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #f5d98b;
+}
+
+.deal-headline {
+  font-family: 'Times New Roman', serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin: 0;
+  color: #fff;
+}
+
+.deal-sub {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+/* Right CTA */
+.deal-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  background: transparent;
+  border: 1px solid #f5d98b;
+  color: #f5d98b;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
+.deal-cta:hover {
+  background: #f5d98b;
+  color: #111;
+}
+
+.deal-cta span {
+  transition: transform 0.3s ease;
+}
+
+.deal-cta:hover span {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .deal-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .deal-text {
+    align-items: center;
+  }
+
+  .deal-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}

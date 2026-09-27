@@ -1,0 +1,135 @@
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1900;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 16px 20px;
+  animation: searchFade 0.25s ease;
+}
+
+@keyframes searchFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.search-panel {
+  background: #fff;
+  width: 100%;
+  max-width: 640px;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  animation: searchDrop 0.3s ease;
+}
+
+@keyframes searchDrop {
+  from { transform: translateY(-20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* === Search bar === */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.search-bar i.bi-search {
+  font-size: 1.1rem;
+  color: #888;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #111;
+  background: transparent;
+}
+
+.search-close {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #999;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.25s ease;
+}
+
+.search-close:hover {
+  color: #111;
+}
+
+/* === Results === */
+.search-results {
+  max-height: 420px;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-result:hover {
+  background: #faf7f0;
+}
+
+.search-result img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.result-info {
+  flex: 1;
+}
+
+.result-category {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #b8860b;
+}
+
+.result-info h4 {
+  font-size: 0.95rem;
+  margin: 2px 0;
+  color: #111;
+  font-weight: 500;
+}
+
+.result-brand {
+  font-size: 0.78rem;
+  color: #888;
+  margin: 0;
+}
+
+.result-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111;
+}
+
+/* === Messages === */
+.search-hint,
+.no-results {
+  padding: 24px 20px;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+}

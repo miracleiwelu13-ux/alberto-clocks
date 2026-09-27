@@ -1,0 +1,128 @@
+.fav-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.fav-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+/* === Empty state === */
+.fav-empty {
+  text-align: center;
+  padding: 80px 20px;
+  border: 1px dashed #ddd;
+  border-radius: 10px;
+}
+
+.fav-empty i {
+  font-size: 2.5rem;
+  color: #b8860b;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.fav-empty p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.fav-cta {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #111;
+  color: #f5d98b;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  border-radius: 6px;
+  transition: background 0.25s ease;
+}
+
+.fav-cta:hover {
+  background: #b8860b;
+  color: #111;
+}
+
+/* === Grid === */
+.fav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.fav-card {
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.fav-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.fav-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.fav-info {
+  padding: 16px;
+}
+
+.fav-category {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #b8860b;
+}
+
+.fav-info h3 {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.1rem;
+  margin: 4px 0;
+  color: #111;
+}
+
+.fav-brand {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0 0 6px;
+}
+
+.fav-price {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.fav-remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  color: #666;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.fav-remove:hover {
+  background: #111;
+  color: #fff;
+}

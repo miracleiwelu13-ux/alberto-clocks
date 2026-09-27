@@ -1,0 +1,163 @@
+.luxury-section {
+  background: #fff;
+  color: #111;
+  padding: 100px 0;
+}
+
+.luxury-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: stretch;
+}
+
+/* === LEFT column === */
+.luxury-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.luxury-eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #b8860b;
+  margin-bottom: 18px;
+}
+
+.luxury-headline {
+  font-family: 'Times New Roman', serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  margin: 0 0 20px;
+  color: #111;
+}
+
+.luxury-sub {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #666;
+  margin: 0 0 26px;
+  max-width: 460px;
+}
+
+.luxury-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #111;
+  padding-bottom: 4px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  align-self: flex-start;
+  margin-bottom: 40px;
+}
+
+.luxury-link:hover {
+  color: #b8860b;
+  border-color: #b8860b;
+}
+
+.luxury-link span {
+  transition: transform 0.3s ease;
+}
+
+.luxury-link:hover span {
+  transform: translateX(4px);
+}
+
+/* === Mini watch row (under text, on the left) === */
+.luxury-mini-watches {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.luxury-mini-card {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.luxury-mini-card:hover {
+  transform: translateY(-4px);
+}
+
+.luxury-mini-image {
+  aspect-ratio: 1;
+  background: #f4f1ea;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.luxury-mini-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.luxury-mini-card:hover .luxury-mini-image img {
+  transform: scale(1.08);
+}
+
+.luxury-mini-card h3 {
+  font-family: 'Times New Roman', serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin: 0 0 3px;
+  color: #111;
+}
+
+.luxury-mini-price {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+/* === RIGHT column — video === */
+.luxury-video-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  min-height: 100%;
+}
+
+.luxury-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Responsive === */
+@media (max-width: 800px) {
+  .luxury-section {
+    padding: 70px 0;
+  }
+
+  .luxury-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .luxury-video-wrap {
+    aspect-ratio: 4 / 5;
+  }
+
+  .luxury-mini-watches {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

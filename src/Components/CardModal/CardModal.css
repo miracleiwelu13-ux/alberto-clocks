@@ -1,0 +1,202 @@
+/* === Overlay (dimmed background) === */
+.card-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 16px;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* === Modal box === */
+.card-modal {
+  background: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 340px;
+  padding: 28px 24px 24px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* === Close button === */
+.card-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.card-modal-close:hover {
+  color: #111;
+}
+
+/* === Title === */
+.card-modal-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.15em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+/* === The membership card visual === */
+.privilege-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+  color: #f5d98b;
+  border-radius: 10px;
+  padding: 20px;
+  aspect-ratio: 1.6 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+}
+
+.privilege-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.privilege-brand {
+  font-family: 'Times New Roman', serif;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+}
+
+.privilege-gem {
+  font-size: 1.1rem;
+}
+
+.privilege-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  opacity: 0.75;
+}
+
+.privilege-card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.privilege-number {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+}
+
+.privilege-since {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+}
+
+/* === Welcome / points === */
+.card-welcome {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcome-text {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0 0 6px;
+}
+
+.points-text {
+  font-size: 0.85rem;
+  color: #b8860b;
+  margin: 0;
+}
+
+/* === Benefits === */
+.card-benefits h3 {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.card-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.card-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #333;
+  padding: 6px 0;
+}
+
+.card-benefits li i {
+  color: #b8860b;
+}
+
+/* === Buttons === */
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-join,
+.btn-signin {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: center;      
+  text-decoration: none;   
+  display: inline-block;   
+}
+
+.btn-join {
+  background: #111;
+  color: #f5d98b;
+  border: 1px solid #111;
+}
+
+.btn-join:hover {
+  background: #b8860b;
+  color: #111;
+  border-color: #b8860b;
+}
+
+.btn-signin {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+.btn-signin:hover {
+  border-color: #111;
+}

@@ -1,0 +1,159 @@
+.vintage-section {
+  background: #fff;
+  color: #111;
+  padding: 100px 0;
+}
+
+.vintage-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: stretch;
+}
+
+/* === LEFT column — image === */
+.vintage-image-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  min-height: 100%;
+}
+
+.vintage-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* === RIGHT column — text + mini watches === */
+.vintage-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vintage-eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #b8860b;
+  margin-bottom: 18px;
+}
+
+.vintage-headline {
+  font-family: 'Times New Roman', serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  margin: 0 0 20px;
+  color: #111;
+}
+
+.vintage-sub {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #666;
+  margin: 0 0 26px;
+  max-width: 460px;
+}
+
+.vintage-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #111;
+  padding-bottom: 4px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+  align-self: flex-start;
+  margin-bottom: 40px;
+}
+
+.vintage-link:hover {
+  color: #b8860b;
+  border-color: #b8860b;
+}
+
+.vintage-link span {
+  transition: transform 0.3s ease;
+}
+
+.vintage-link:hover span {
+  transform: translateX(4px);
+}
+
+/* === Mini watch row === */
+.vintage-mini-watches {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.vintage-mini-card {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.vintage-mini-card:hover {
+  transform: translateY(-4px);
+}
+
+.vintage-mini-image {
+  aspect-ratio: 1;
+  background: #f4f1ea;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.vintage-mini-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.vintage-mini-card:hover .vintage-mini-image img {
+  transform: scale(1.08);
+}
+
+.vintage-mini-card h3 {
+  font-family: 'Times New Roman', serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin: 0 0 3px;
+  color: #111;
+}
+
+.vintage-mini-price {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+/* === Responsive === */
+@media (max-width: 800px) {
+  .vintage-section {
+    padding: 70px 0;
+  }
+
+  .vintage-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .vintage-image-wrap {
+    aspect-ratio: 4 / 5;
+  }
+}
