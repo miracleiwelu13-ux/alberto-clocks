@@ -21,7 +21,7 @@ function LuxurySection() {
           <p className="luxury-sub">
             Precision, heritage, and quiet confidence — for those who know the difference.
           </p>
-          <Link to="/products" className="luxury-link">
+          <Link to="/products?category=luxury" className="luxury-link">
             Explore Luxury <span>→</span>
           </Link>
 
@@ -29,7 +29,7 @@ function LuxurySection() {
           <div className="luxury-mini-watches">
             {luxuryWatches.map((watch) => (
               <Link
-                to="/products"
+                to={`/products?watch=${watch.id}`}
                 key={watch.id}
                 className="luxury-mini-card"
               >

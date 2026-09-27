@@ -24,14 +24,14 @@ function VintageSection() {
           <p className="vintage-sub">
             Restored classics with stories older than the people wearing them.
           </p>
-          <Link to="/products" className="vintage-link">
+          <Link to="/products?category=vintage" className="vintage-link">
             Explore Vintage <span>→</span>
           </Link>
 
           <div className="vintage-mini-watches">
             {vintageWatches.map((watch) => (
               <Link
-                to="/products"
+                to={`/products?watch=${watch.id}`}
                 key={watch.id}
                 className="vintage-mini-card"
               >

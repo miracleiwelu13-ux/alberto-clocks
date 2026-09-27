@@ -23,10 +23,24 @@ function Products() {
   const [filters, setFilters] = useState(emptyFilters)
   const [selectedWatch, setSelectedWatch] = useState(null)
 
-  // Read URL param on mount
+  // Read URL param on mount (discount filter)
   useEffect(() => {
-    if (searchParams.get('filter') === 'discounted') {
-      setFilters({ ...emptyFilters, onSaleOnly: true })
+  const filterParam = searchParams.get('filter')
+  const categoryParam = searchParams.get('category')
+
+  if (filterParam === 'discounted') {
+    setFilters({ ...emptyFilters, onSaleOnly: true })
+  } else if (categoryParam) {
+    setFilters({ ...emptyFilters, category: [categoryParam] })
+  }
+}, [searchParams])
+
+  // Open specific watch from URL
+  useEffect(() => {
+    const watchId = searchParams.get('watch')
+    if (watchId) {
+      const found = watches.find((w) => w.id === Number(watchId))
+      if (found) setSelectedWatch(found)
     }
   }, [searchParams])
 
@@ -181,13 +195,15 @@ function Products() {
           </div>
         </div>
       )}
+
       {selectedWatch && (
         <ProductModal
           watch={selectedWatch}
           onClose={() => setSelectedWatch(null)}
         />
-     )}
+      )}
     </div>
-)}
+  )
+}
 
 export default Products

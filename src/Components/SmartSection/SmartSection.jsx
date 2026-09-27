@@ -21,14 +21,14 @@ function SmartSection() {
           <p className="smart-sub">
             Connected technology, dressed in Alberto's signature finish.
           </p>
-          <Link to="/products" className="smart-link">
-            Explore Smart <span>→</span>
+          <Link to="/products?category=smart" className="smart-link">
+           Explore Smart <span>→</span>
           </Link>
 
           <div className="smart-mini-watches">
             {smartWatches.map((watch) => (
               <Link
-                to="/products"
+                to={`/products?watch=${watch.id}`}
                 key={watch.id}
                 className="smart-mini-card"
               >
