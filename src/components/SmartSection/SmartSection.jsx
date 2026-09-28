@@ -1,20 +1,16 @@
 import { Link } from 'react-router-dom'
 import watches from '../../data/watches.json'
+import { useInViewVideo } from '../../hooks/useInViewVideo'
 import './SmartSection.css'
 
 function SmartSection() {
-  const handleTimeUpdate = (e) => {
-    if (e.currentTarget.currentTime >= 5) {
-      e.currentTarget.currentTime = 0
-    }
-  }
+  const videoRef = useInViewVideo()
 
   const smartWatches = watches.filter((w) => w.category === 'smart').slice(0, 3)
 
   return (
     <section className="smart-section">
       <div className="smart-inner">
-        {/* LEFT — text + mini watches */}
         <div className="smart-left">
           <span className="smart-eyebrow">MODERN</span>
           <h2 className="smart-headline">Smart Watches</h2>
@@ -22,7 +18,7 @@ function SmartSection() {
             Connected technology, dressed in Alberto's signature finish.
           </p>
           <Link to="/products?category=smart" className="smart-link">
-           Explore Smart <span>→</span>
+            Explore Smart <span>→</span>
           </Link>
 
           <div className="smart-mini-watches">
@@ -42,16 +38,14 @@ function SmartSection() {
           </div>
         </div>
 
-        {/* RIGHT — video */}
         <div className="smart-video-wrap">
           <video
+            ref={videoRef}
             className="smart-video"
             src="/videos/smart-01.mp4"
-            autoPlay
             muted
             loop
             playsInline
-            onTimeUpdate={handleTimeUpdate}
           />
         </div>
       </div>

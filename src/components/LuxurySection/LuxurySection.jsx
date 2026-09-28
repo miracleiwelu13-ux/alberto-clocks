@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import watches from '../../data/watches.json'
+import { useInViewVideo } from '../../hooks/useInViewVideo'
 import './LuxurySection.css'
 
 function LuxurySection() {
@@ -10,6 +11,7 @@ function LuxurySection() {
   }
 
   const luxuryWatches = watches.filter((w) => w.category === 'luxury').slice(0, 3)
+  const videoRef = useInViewVideo()
 
   return (
     <section className="luxury-section">
@@ -46,14 +48,13 @@ function LuxurySection() {
         {/* RIGHT — video */}
         <div className="luxury-video-wrap">
           <video
-            className="luxury-video"
-            src="/videos/luxury-01.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            onTimeUpdate={handleTimeUpdate}
-          />
+  className="luxury-video"
+  src="/videos/luxury-01.mp4"
+  autoPlay
+  muted
+  loop
+  playsInline
+/>
         </div>
       </div>
     </section>

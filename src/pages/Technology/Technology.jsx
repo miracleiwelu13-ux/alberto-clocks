@@ -1,3 +1,4 @@
+import { useInViewVideo } from '../../hooks/useInViewVideo'
 import './Technology.css'
 
 const techCards = [
@@ -31,15 +32,10 @@ const standards = [
 ]
 
 function Technology() {
-  const handleTimeUpdate = (e) => {
-    if (e.currentTarget.currentTime >= 5) {
-      e.currentTarget.currentTime = 0
-    }
-  }
+  const videoRef = useInViewVideo()
 
   return (
     <div className="tech-page">
-      {/* 1. Intro */}
       <section className="tech-intro">
         <div className="tech-inner">
           <span className="tech-eyebrow">KNOW YOUR WATCH</span>
@@ -51,7 +47,6 @@ function Technology() {
         </div>
       </section>
 
-      {/* 2. Tech cards */}
       <section className="tech-cards-section">
         <div className="tech-inner">
           <div className="tech-cards">
@@ -66,7 +61,6 @@ function Technology() {
         </div>
       </section>
 
-      {/* 3. Split — video + text */}
       <section className="tech-split">
         <div className="tech-inner tech-split-grid">
           <div className="tech-split-text">
@@ -82,19 +76,17 @@ function Technology() {
 
           <div className="tech-split-video-wrap">
             <video
+              ref={videoRef}
               className="tech-split-video"
               src="/videos/technology-movement.mp4"
-              autoPlay
               muted
               loop
               playsInline
-              onTimeUpdate={handleTimeUpdate}
             />
           </div>
         </div>
       </section>
 
-      {/* 4. Standards strip */}
       <section className="tech-standards">
         <div className="tech-inner">
           <div className="standards-grid">

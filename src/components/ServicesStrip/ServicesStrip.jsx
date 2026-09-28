@@ -1,3 +1,4 @@
+import { useInViewVideo } from '../../hooks/useInViewVideo'
 import './ServicesStrip.css'
 
 const services = [
@@ -19,22 +20,17 @@ const services = [
 ]
 
 function ServicesStrip() {
-  const handleTimeUpdate = (e) => {
-    if (e.currentTarget.currentTime >= 5) {
-      e.currentTarget.currentTime = 0
-    }
-  }
+  const videoRef = useInViewVideo()
 
   return (
     <section className="services-strip">
       <video
+        ref={videoRef}
         className="services-video"
         src="/videos/repair-01.mp4"
-        autoPlay
         muted
         loop
         playsInline
-        onTimeUpdate={handleTimeUpdate}
       />
 
       <div className="services-overlay" />

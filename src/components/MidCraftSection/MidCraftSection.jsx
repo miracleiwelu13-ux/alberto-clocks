@@ -1,23 +1,19 @@
 import { Link } from 'react-router-dom'
+import { useInViewVideo } from '../../hooks/useInViewVideo'
 import './MidCraftSection.css'
 
 function MidCraftSection() {
-  const handleTimeUpdate = (e) => {
-    if (e.currentTarget.currentTime >= 5) {
-      e.currentTarget.currentTime = 0
-    }
-  }
+  const videoRef = useInViewVideo()
 
   return (
     <section className="mid-craft">
       <video
+        ref={videoRef}
         className="mid-craft-video"
         src="/videos/mid-craft.mp4"
-        autoPlay
         muted
         loop
         playsInline
-        onTimeUpdate={handleTimeUpdate}
       />
 
       <div className="mid-craft-overlay" />
