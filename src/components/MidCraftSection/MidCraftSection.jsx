@@ -11,6 +11,7 @@ function MidCraftSection() {
         ref={videoRef}
         className="mid-craft-video"
         src="/videos/mid-craft.mp4"
+        poster="/images/posters/mid-craft.jpg"
         muted
         loop
         playsInline

@@ -28,6 +28,7 @@ function ServicesStrip() {
         ref={videoRef}
         className="services-video"
         src="/videos/repair-01.mp4"
+        poster="/images/posters/repair-01.jpg"
         muted
         loop
         playsInline

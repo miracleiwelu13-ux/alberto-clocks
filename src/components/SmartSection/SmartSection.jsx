@@ -43,6 +43,7 @@ function SmartSection() {
             ref={videoRef}
             className="smart-video"
             src="/videos/smart-01.mp4"
+            poster="/images/posters/smart-01.jpg"
             muted
             loop
             playsInline

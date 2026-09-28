@@ -79,6 +79,7 @@ function Technology() {
               ref={videoRef}
               className="tech-split-video"
               src="/videos/technology-movement.mp4"
+              poster="/images/posters/technology-movement.jpg"
               muted
               loop
               playsInline

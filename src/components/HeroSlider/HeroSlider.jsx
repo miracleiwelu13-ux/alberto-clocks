@@ -5,18 +5,21 @@ import './HeroSlider.css'
 const slides = [
   {
     video: '/videos/hero-luxury.mp4',
+    poster: '/images/posters/hero-luxury.jpg',
     eyebrow: 'EST. 1987 · LAGOS',
     headline: 'Time, perfected.',
     sub: 'A private collection of exceptional timepieces — crafted for those who measure luxury in moments, not minutes.',
   },
   {
     video: '/videos/hero-vintage.mp4',
+    poster: '/images/posters/hero-vintage.jpg',
     eyebrow: 'HERITAGE',
     headline: 'Stories in every second.',
     sub: 'Restored vintage, ready for a new chapter. Every piece carries the weight of its history.',
   },
   {
     video: '/videos/hero-gears.mp4',
+    poster: '/images/posters/hero-gears.jpg',
     eyebrow: 'CRAFTED BY HAND',
     headline: 'Inside every movement.',
     sub: 'Precision engineering assembled, inspected, and finished by hand in our atelier.',
@@ -64,6 +67,7 @@ function HeroSlider() {
           <video
             className="hero-video"
             src={slide.video}
+            poster={slide.poster}
             autoPlay
             muted
             loop

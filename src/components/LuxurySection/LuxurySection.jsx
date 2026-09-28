@@ -48,13 +48,14 @@ function LuxurySection() {
         {/* RIGHT — video */}
         <div className="luxury-video-wrap">
           <video
-  className="luxury-video"
-  src="/videos/luxury-01.mp4"
-  autoPlay
-  muted
-  loop
-  playsInline
-/>
+            ref={videoRef}
+            className="luxury-video"
+            src="/videos/luxury-01.mp4"
+            poster="/images/posters/luxury-01.jpg"
+            muted
+            loop
+            playsInline
+            />
         </div>
       </div>
     </section>
