@@ -242,3 +242,8 @@
   .cart-item-total { grid-area: total; text-align: right; }
   .cart-remove { grid-area: remove; justify-self: end; }
 }
+
+.cart-discount-note {
+  color: #b8860b;
+  font-weight: 600;
+}

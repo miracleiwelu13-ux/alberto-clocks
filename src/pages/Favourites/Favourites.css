@@ -126,3 +126,22 @@
   background: #111;
   color: #fff;
 }
+
+.fav-prices {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0;
+}
+
+.fav-price-old {
+  font-size: 0.8rem;
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.fav-price {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #b8860b;
+}

@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import { useCart } from '../../context/CartContext'
+import { getFinalPrice, getLineTotal } from '../../utils/price'
 import './Cart.css'
 
 function Cart() {
   const { cart, removeFromCart, updateQuantity, cartCount } = useCart()
 
-  const subtotal = cart.reduce((sum, w) => sum + w.price * w.quantity, 0)
+  const subtotal = cart.reduce((sum, w) => sum + getLineTotal(w, w.quantity), 0)
 
   return (
     <div className="cart-page">
@@ -29,7 +30,14 @@ function Cart() {
                   <span className="cart-category">{watch.category}</span>
                   <h3>{watch.name}</h3>
                   <p className="cart-brand">{watch.brand}</p>
-                  <p className="cart-unit-price">${watch.price.toLocaleString()} each</p>
+                  <p className="cart-unit-price">
+                    ${getFinalPrice(watch).toLocaleString()} each
+                    {watch.discount > 0 && (
+                      <span className="cart-discount-note">
+                        {' '}· {watch.discount}% off
+                      </span>
+                    )}
+                  </p>
                 </div>
 
                 <div className="cart-quantity">
@@ -49,7 +57,7 @@ function Cart() {
                 </div>
 
                 <div className="cart-item-total">
-                  ${(watch.price * watch.quantity).toLocaleString()}
+                  ${getLineTotal(watch, watch.quantity).toLocaleString()}
                 </div>
 
                 <button

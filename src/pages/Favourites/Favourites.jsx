@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useFavourites } from '../../context/FavouritesContext'
+import { getFinalPrice } from '../../utils/price'
 import './Favourites.css'
 
 function Favourites() {
@@ -24,7 +25,23 @@ function Favourites() {
                 <span className="fav-category">{watch.category}</span>
                 <h3>{watch.name}</h3>
                 <p className="fav-brand">{watch.brand}</p>
-                <p className="fav-price">${watch.price.toLocaleString()}</p>
+
+                <div className="fav-prices">
+                  {watch.discount > 0 ? (
+                    <>
+                      <span className="fav-price-old">
+                        ${watch.price.toLocaleString()}
+                      </span>
+                      <span className="fav-price">
+                        ${getFinalPrice(watch).toLocaleString()}
+                      </span>
+                    </>
+                  ) : (
+                    <span className="fav-price">
+                      ${watch.price.toLocaleString()}
+                    </span>
+                  )}
+                </div>
               </div>
               <button
                 className="fav-remove"
